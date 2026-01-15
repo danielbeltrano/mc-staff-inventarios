@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.sidebar-container {
+  @apply flex flex-col bg-white h-[96%] rounded-3xl
+ py-4 border transition-all duration-500 border-solid 
+ border-amber-default shadow-md
+}
+/* 
+@layer base {
+  .home-title {
+    -webkit-text-stroke: 2px black;
+  }
+} */
+
+.student-profile-card{
+  @apply border rounded-lg p-6 shadow-md bg-white
+}
+
+/* input[type="file"] {
+  @apply hidden ;
+} */
+
+.matriculas-table {
+  @apply w-full overflow-x-auto shadow-md bg-white p-4 rounded-md border border-amber-default;
+}
+
+.matriculas-table table {
+  @apply min-w-full bg-white text-sm;
+  thead {
+    @apply text-center text-blue-default text-lg font-semibold;
+    th {
+      @apply py-2 px-4 border border-neutral-300;
+    }
+  }
+  tbody {
+    @apply text-center text-sm;
+    tr {
+      td {
+        @apply py-2 px-4 border-b border border-neutral-300;
+      }
+    }
+  }
+}
+
+.modal-container strong {
+  @apply text-blue-default ml-4 ;
+}
+
+.modal-estudiante,
+.modal-padre,
+.modal-madre,
+.modal-guardian {
+  @apply border-b pb-6 border-neutral-300;
+}
+
+
+
+/*CASEDETAILS*/
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+.min-w-max {
+  min-width: max-content;
+}
+
+/* Animación para el modal de advertencia */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
