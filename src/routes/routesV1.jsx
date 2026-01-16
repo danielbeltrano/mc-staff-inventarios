@@ -70,6 +70,9 @@ import VistaProfesorPage from "../pages/matriculas/VistaProfesorPage";
 // import MatriculasPage from "../pages/matriculasOld";
 // import CierreMatriculasPage from "../pages/matriculasOld/CierreMatriculasPage";
 
+//Inventarios
+import Items from "../pages/Inventario/Items/Items";
+
 const AppRoutes = () => {
   const screenSize = useScreenSize();
   const isMobile = screenSize.width <= 768;
@@ -104,6 +107,7 @@ const AppRoutes = () => {
         />
         <Route path="/forgot-password" element={<RobustPasswordReset />} />
         <Route path="/unauthorized" element={<UnauthorizedPage />} />
+        <Route path="/items" element={<Items />} />
 
         {/* Rutas protegidas */}
         <Route element={<ProtectedLayout />}>
