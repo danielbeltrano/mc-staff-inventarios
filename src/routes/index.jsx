@@ -35,10 +35,6 @@ import CreatePersonalPage from "../pages/superAdmin/CreatePersonalPage";
 import SequenceAdminPanel from "../features/Superadmin/SequenceAdminPanel";
 import ProfesionalesContainer from "../features/Superadmin/ProfesionalesManagement/container/ProfesionalesContainer";
 
-// Importar páginas de Inventario
-import Items from "../pages/Inventario/Items/Items";
-import DetalleItem from "../pages/Inventario/Items/DetalleItem";
-import RegistrarItem from "../pages/Inventario/Items/RegistrarItem";
 
 const AppRoutes = () => {
   const screenSize = useScreenSize();
@@ -199,9 +195,6 @@ const AppRoutes = () => {
               path="/administrador/configuracion-bienestar"
               element={<ProfesionalesContainer />}
             />
-            <Route path="/Items" element={<Items />} />
-            <Route path="/item/:id" element={<DetalleItem />} />
-            <Route path="/registro-item" element={<RegistrarItem />} />
           </Route>
           
         </Route>
